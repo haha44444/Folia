@@ -28,3 +28,8 @@ jobs:
         run: ./gradlew applyPatches
       - name: Build
         run: ./gradlew build
+      - name: Output Package
+        uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: build/libs
